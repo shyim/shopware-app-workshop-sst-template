@@ -1,0 +1,23 @@
+{
+  "name": "serverless-hello-world-app",
+  "version": "1.0.0",
+  "description": "This is an example app for using sst to create a serverless funtion on AWS",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shopware AG",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "~3.668.0",
+    "@aws-sdk/lib-dynamodb": "~3.668.0",
+    "@shopware-ag/app-server-sdk": "^1.1.7",
+    "hono": "^4.6.3",
+    "sst": "^3.1.74"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.145",
+    "@types/node": "^22.7.5",
+    "typescript": "^5.6.3"
+  }
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/Framework/App/Manifest/Schema/manifest-2.0.xsd">
+    <meta>
+        <name>ServerlessHelloWorldExampleApp</name>
+        <label>Serverless Hello World App</label>
+        <label lang="de-DE">Serverlose Hallo Welt App</label>
+        <description>An example of a serverless app backend</description>
+        <description lang="de-DE">Ein Beispiel eines serverlosen App Backends</description>
+        <author>shopware AG</author>
+        <copyright>(c) by shopware AG</copyright>
+        <version>0.0.1</version>
+        <license>MIT</license>
+    </meta>
+    <setup>
+        <registrationUrl>https://serverless-hello-world.apps.shopware.io/app/register</registrationUrl>
+        <secret>ServerlessHelloWorldExampleSecret</secret>
+    </setup>
+    <webhooks>
+        <webhook name="appActivated" url="https://serverless-hello-world.apps.shopware.io/app/activate" event="app.activated"/>
+        <webhook name="appDeactivated" url="https://serverless-hello-world.apps.shopware.io/app/deactivate" event="app.deactivated"/>
+        <webhook name="appDeleted" url="https://serverless-hello-world.apps.shopware.io/app/delete" event="app.deleted"/>
+    </webhooks>
+    <admin>
+        <action-button action="hello" entity="product" view="list" url="https://serverless-hello-world.apps.shopware.io/app/hello">
+          <label>hello</label>
+        </action-button>
+    </admin>
+</manifest>
